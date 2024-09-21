@@ -8,16 +8,7 @@
 </head>
 <body>
     <h1 id="monthYear"></h1>
-    <div id="predefinedTasks">
-        <select id="taskSelect">
-            <option value="">Selecciona una tarea</option>
-            <option value="Desayunar">Desayunar</option>
-            <option value="Ejercicio">Ejercicio</option>
-            <option value="Leer">Leer</option>
-            <!-- Añade más tareas predefinidas aquí -->
-        </select>
-        <button id="addPredefinedTask">Añadir Tarea</button>
-    </div>
+    <button id="openModal">Agregar Tarea</button>
     <div id="calendar">
         <div class="day-name">Lunes</div>
         <div class="day-name">Martes</div>
@@ -27,6 +18,28 @@
         <div class="day-name">Sábado</div>
         <div class="day-name">Domingo</div>
     </div>
+
+    <!-- Ventana Modal -->
+    <div id="taskModal" class="modal">
+        <div class="modal-content">
+            <span class="close">×</span>
+            <h2>Agregar Tarea</h2>
+            <input type="text" id="taskInput" placeholder="Nombre de la tarea">
+            <select id="dayOfWeekSelect">
+                <option value="">Selecciona un día de la semana</option>
+                <option value="0">Lunes</option>
+                <option value="1">Martes</option>
+                <option value="2">Miércoles</option>
+                <option value="3">Jueves</option>
+                <option value="4">Viernes</option>
+                <option value="5">Sábado</option>
+                <option value="6">Domingo</option>
+            </select>
+            <button id="addTaskToWeekday">Añadir a Todos los Días Seleccionados</button>
+            <button id="addPredefinedTask">Aceptar</button>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
